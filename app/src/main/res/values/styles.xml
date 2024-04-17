@@ -1,0 +1,77 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/black_50</item>
+        <item name="drawerArrowStyle">@style/DrawerIcon</item>
+        <item name="android:forceDarkAllowed" tools:targetApi="29">false</item>
+        <item name="android:navigationBarColor">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="SplashTheme" parent="AppTheme">
+        <item name="android:windowBackground">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="DrawerIcon" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="color">@color/white</item>
+    </style>
+
+    <style name="AppTheme.WhiteAccent">
+        <item name="colorAccent">@color/white</item>
+    </style>
+
+    <style name="AppTheme.SemiTrans" parent="AppTheme">
+        <item name="android:textColor">@android:color/secondary_text_light</item>
+        <item name="windowActionBarOverlay">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowAnimationStyle">@style/FadingAnimation</item>
+    </style>
+
+    <style name="PersistPopup" parent="AppTheme">
+        <item name="android:windowBackground">@color/black_90</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowAnimationStyle">@style/FadingAnimation</item>
+    </style>
+
+    <style name="FadingAnimation" parent="@android:style/Animation.Activity">
+        <item name="android:windowEnterAnimation">@null</item>
+        <item name="android:windowExitAnimation">@null</item>
+        <item name="android:activityOpenEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:activityOpenExitAnimation">@android:anim/fade_out</item>
+        <item name="android:activityCloseEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:activityCloseExitAnimation">@android:anim/fade_out</item>
+    </style>
+
+    <style name="SwitchStyle">
+        <item name="colorControlActivated">@color/green_1</item>
+    </style>
+
+    <style name="SearchViewStyle" parent="Widget.AppCompat.SearchView">
+        <item name="queryHint">@string/search_hint</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:editTextColor">@color/white</item>
+        <item name="android:textColorHint">@color/white_60</item>
+        <item name="colorAccent">@color/white_dim</item>
+    </style>
+
+    <style name="collapsible_expanded" parent="AppTheme">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/extra_bold</item>
+        <item name="android:textSize">25sp</item>
+    </style>
+
+    <style name="collapsible_collapsed" parent="AppTheme">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="White.TextInputLayout" parent="Widget.Design.TextInputLayout">
+        <item name="android:textColorHint">@color/white_aa</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="colorControlNormal">@color/white_60</item>
+        <item name="colorControlActivated">@color/green_1</item>
+        <item name="colorControlHighlight">@color/pink</item>
+    </style>
+</resources>

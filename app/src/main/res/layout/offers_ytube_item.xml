@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/offers_ytube_item_holder"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:background="@drawable/ripple_rc_colorprimary_light"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/offers_ytube_item_imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="10dp"
+        android:adjustViewBounds="true"
+        android:background="@color/white_60"
+        android:minWidth="107dp" />
+
+    <TextView
+        android:id="@+id/offers_ytube_item_titleView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/offers_ytube_item_imageView"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/offers_ytube_item_amtView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/offers_ytube_item_titleView"
+        android:layout_toEndOf="@id/offers_ytube_item_imageView"
+        android:textColor="@color/white_aa"
+        android:textSize="13sp" />
+</RelativeLayout>

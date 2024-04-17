@@ -1,0 +1,86 @@
+apply plugin: 'com.android.application'
+
+android {
+    namespace 'org.mintsoft.mintly'
+    defaultConfig {
+        applicationId "org.mintsoft.mintly"
+        minSdkVersion 21
+        compileSdk 34
+        targetSdkVersion 34
+        versionCode 28
+        buildToolsVersion = "34.0.0"
+        versionName "1.66"
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation fileTree(dir: 'libs', include: ['*.aar', '*.jar'])
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    //noinspection GradleDependency
+    implementation 'androidx.annotation:annotation:1.5.0'
+
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'com.google.android.material:material:1.9.0'
+    implementation 'androidx.preference:preference:1.2.1'
+
+    //noinspection GradleDependency
+    implementation 'com.squareup.picasso:picasso:2.8'
+    implementation 'androidx.palette:palette:1.0.0'
+    implementation 'com.android.volley:volley:1.2.1'
+    implementation 'com.facebook.android:facebook-login:15.2.0'
+
+    implementation platform('com.google.firebase:firebase-bom:31.2.3')
+    implementation 'com.google.firebase:firebase-auth'
+    implementation 'com.google.firebase:firebase-messaging'
+    implementation 'com.google.android.gms:play-services-auth:20.7.0'
+    implementation 'com.google.firebase:firebase-dynamic-links'
+    implementation 'com.google.firebase:firebase-appcheck-playintegrity'
+    implementation "androidx.browser:browser:1.6.0"
+
+    //Ads
+    implementation 'com.google.android.gms:play-services-ads:22.4.0'
+    implementation 'com.google.android.gms:play-services-ads-identifier:18.0.1'
+    implementation 'com.google.android.gms:play-services-base:18.2.0'
+
+    implementation 'com.tapjoy:tapjoy-android-sdk:12.11.1'
+    implementation 'com.fyber:offerwall-sdk:9.2.4'
+    implementation 'com.adcolony:sdk:4.8.0'
+    //noinspection GradleDependency
+    implementation 'com.chartboost:chartboost-sdk:8.4.3'
+    //noinspection GradleDependency
+    implementation 'com.ironsource.sdk:mediationsdk:7.2.3.1'
+    implementation 'com.google.android.gms:play-services-appset:16.0.2'
+    implementation 'com.vungle:publisher-sdk-android:6.12.0'
+    implementation 'androidx.localbroadcastmanager:localbroadcastmanager:1.1.0'
+    implementation 'com.facebook.android:audience-network-sdk:6.12.0'
+    implementation 'com.unity3d.ads:unity-ads:4.5.0'
+
+    //Applovin mediation
+    implementation 'com.applovin:applovin-sdk:11.7.1'
+    implementation 'com.google.android.exoplayer:exoplayer:2.19.1'
+    implementation 'com.applovin.mediation:facebook-adapter:6.12.0.2'
+
+    //Extra
+    implementation 'io.github.aghajari:AXEmojiView:1.5.2'
+    implementation 'io.github.aghajari:AXEmojiView-WhatsAppProvider:1.5.0'
+    implementation 'io.supercharge:shimmerlayout:2.1.0'
+}
+apply plugin: 'com.google.gms.google-services'

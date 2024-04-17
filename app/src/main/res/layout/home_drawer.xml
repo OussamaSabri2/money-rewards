@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:gravity="center_vertical"
+        android:padding="25dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_white_semi"
+            android:padding="3dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:cardBackgroundColor="@color/colorPrimaryDark"
+                app:cardCornerRadius="30dp">
+
+                <ImageView
+                    android:id="@+id/drawer_avatarView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop" />
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/drawer_nameView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="sans-serif"
+                android:lines="1"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/rc_coin_bg_semitrans"
+                android:gravity="center_vertical"
+                android:paddingStart="3dp"
+                android:paddingTop="3dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="3dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="5dp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/icon_coin" />
+
+                <TextView
+                    android:id="@+id/drawer_balanceView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/extra_bold"
+                    android:lines="1"
+                    android:textColor="@color/yellow_2"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@drawable/grad_drawer_line" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingStart="20dp"
+        android:paddingTop="20dp"
+        android:paddingEnd="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/drawer_go_leaderboard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/drawer_menu_bg"
+                android:drawablePadding="22dp"
+                android:gravity="center_vertical"
+                android:padding="15dp"
+                android:text="@string/leaderboard"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                app:drawableStartCompat="@drawable/ic_ranking" />
+
+            <TextView
+                android:id="@+id/drawer_go_offerwall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/drawer_menu_bg"
+                android:drawablePadding="22dp"
+                android:gravity="center_vertical"
+                android:padding="15dp"
+                android:text="@string/earn_coins"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                app:drawableStartCompat="@drawable/ic_offer" />
+
+            <TextView
+                android:id="@+id/drawer_go_tasks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/drawer_menu_bg"
+                android:drawablePadding="20dp"
+                android:gravity="center_vertical"
+                android:padding="15dp"
+                android:text="@string/task_for_you"
+                android:textAllCaps="true"
+                android:textColor="@color/yellow_2"
+                android:textSize="13sp"
+                app:drawableStartCompat="@drawable/crown" />
+
+            <TextView
+                android:id="@+id/drawer_go_gift"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/drawer_menu_bg"
+                android:drawablePadding="22dp"
+                android:gravity="center_vertical"
+                android:padding="15dp"
+                android:text="@string/gift_items"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                app:drawableStartCompat="@drawable/ic_gift" />
+
+            <TextView
+                android:id="@+id/drawer_go_refs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/drawer_menu_bg"
+                android:drawablePadding="22dp"
+                android:gravity="center_vertical"
+                android:padding="15dp"
+                android:text="@string/invite"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                app:drawableStartCompat="@drawable/ic_person_add" />
+
+            <TextView
+                android:id="@+id/drawer_go_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/drawer_menu_bg"
+                android:drawablePadding="22dp"
+                android:gravity="center_vertical"
+                android:padding="15dp"
+                android:text="@string/profile"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                app:drawableStartCompat="@drawable/ic_profile" />
+
+            <TextView
+                android:id="@+id/drawer_go_settings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/drawer_menu_bg"
+                android:drawablePadding="22dp"
+                android:gravity="center_vertical"
+                android:padding="15dp"
+                android:text="@string/sett"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                app:drawableStartCompat="@drawable/ic_settings" />
+
+            <TextView
+                android:id="@+id/drawer_go_faq"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/drawer_menu_bg"
+                android:drawablePadding="22dp"
+                android:gravity="center_vertical"
+                android:padding="15dp"
+                android:text="@string/faq"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                app:drawableStartCompat="@drawable/ic_help"
+                app:drawableTint="@color/white_aa" />
+
+            <TextView
+                android:id="@+id/drawer_go_chat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/drawer_menu_bg"
+                android:drawablePadding="22dp"
+                android:gravity="center_vertical"
+                android:padding="15dp"
+                android:text="@string/chat_room"
+                android:textAllCaps="true"
+                android:textColor="@color/green_1"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                app:drawableStartCompat="@drawable/ic_chat"
+                app:drawableTint="@color/green_1" />
+
+            <TextView
+                android:id="@+id/drawer_go_contact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/drawer_menu_bg"
+                android:drawablePadding="22dp"
+                android:gravity="center_vertical"
+                android:padding="15dp"
+                android:text="@string/support"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                app:drawableStartCompat="@drawable/ic_contact" />
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/drawer_go_exit"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="10dp"
+        android:background="@drawable/rc_colorprimary"
+        android:text="@string/close_app"
+        android:textColor="@color/white_aa" />
+</LinearLayout>

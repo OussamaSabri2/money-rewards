@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#29264a</color>
+    <color name="colorPrimaryLight">#353254</color>
+    <color name="colorPrimaryDark">#1b1933</color>
+    <color name="white">#ffffff</color>
+    <color name="white_aa">#aaffffff</color>
+    <color name="white_60">#60ffffff</color>
+    <color name="white_dim">#eaebf0</color>
+    <color name="black">#000000</color>
+    <color name="black_90">#90000000</color>
+    <color name="black_70">#70000000</color>
+    <color name="black_50">#50000000</color>
+
+    <color name="green_1">#1cc587</color>
+    <color name="green_2">#388e3c</color>
+    <color name="fb_color">#3c5b9b</color>
+    <color name="red_1">#ff0000</color>
+    <color name="red_2">#ca0000</color>
+    <color name="pink">#d84595</color>
+
+    <color name="gray">#cccccc</color>
+    <color name="gray_2">#526687</color>
+    <color name="blue_1">#00367c</color>
+    <color name="blue_2">#3d60c6</color>
+    <color name="blue_3">#536ce3</color>
+    <color name="blue_4">#01b1ec</color>
+    <color name="blue_5">#c6dafc</color>
+    <color name="yellow_1">#ff8318</color>
+    <color name="yellow_2">#ffc95c</color>
+
+    <color name="violet_1">#6c2be7</color>
+    <color name="violet_2">#3a0b99</color>
+    <color name="violet_3">#511abd</color>
+</resources>

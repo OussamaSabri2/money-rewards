@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/chat_dummy_0"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/chat_back"
+            android:layout_width="43dp"
+            android:layout_height="28dp"
+            android:layout_centerVertical="true"
+            android:paddingStart="15dp"
+            android:paddingEnd="0dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_arrow" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/chat_room"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/chat_statusView"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/chat_yellow" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintBottom_toTopOf="@id/chat_dummy_1"
+        app:layout_constraintTop_toBottomOf="@id/chat_dummy_0">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/chat_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/chat_dummy_1"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/chat_bg_input"
+        app:layout_constraintBottom_toTopOf="@id/chat_emoji_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.94" />
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/chat_bg_input"
+        app:layout_constraintBottom_toBottomOf="@id/chat_inputView"
+        app:layout_constraintEnd_toEndOf="@id/chat_dummy_1"
+        app:layout_constraintStart_toStartOf="@id/chat_dummy_1"
+        app:layout_constraintTop_toTopOf="@id/chat_inputView" />
+
+    <com.aghajari.emojiview.view.AXEmojiEditText
+        android:id="@+id/chat_inputView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@android:color/transparent"
+        android:hint="@string/write_here"
+        android:inputType="textCapSentences|textMultiLine"
+        android:isScrollContainer="true"
+        android:maxLength="500"
+        android:maxLines="4"
+        android:minHeight="50dp"
+        android:paddingStart="8dp"
+        android:paddingTop="5dp"
+        android:paddingEnd="1dp"
+        android:paddingBottom="5dp"
+        android:singleLine="false"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white_60"
+        android:textCursorDrawable="@null"
+        app:layout_constraintBottom_toBottomOf="@id/chat_dummy_1"
+        app:layout_constraintEnd_toStartOf="@id/chat_attachment"
+        app:layout_constraintStart_toEndOf="@id/chat_emojiBtn" />
+
+    <ImageView
+        android:id="@+id/chat_emojiBtn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="4dp"
+        android:src="@drawable/ic_emoji"
+        app:layout_constraintBottom_toBottomOf="@id/chat_dummy_1"
+        app:layout_constraintStart_toStartOf="@id/chat_dummy_1"
+        app:layout_constraintTop_toTopOf="@id/chat_dummy_1" />
+
+    <ImageView
+        android:id="@+id/chat_attachment"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginEnd="3dp"
+        android:rotation="45"
+        android:src="@drawable/ic_attachment"
+        app:layout_constraintBottom_toBottomOf="@id/chat_dummy_1"
+        app:layout_constraintEnd_toStartOf="@id/chat_sendBtn"
+        app:layout_constraintTop_toTopOf="@id/chat_dummy_1"
+        app:tint="@color/white_60" />
+
+    <org.mintsoft.mintly.chatsupp.RecordView
+        android:id="@+id/chat_recordView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:counter_time_color="#ff0000"
+        app:layout_constraintBottom_toBottomOf="@id/chat_dummy_1"
+        app:layout_constraintEnd_toStartOf="@id/chat_sendBtn"
+        app:layout_constraintStart_toStartOf="@id/chat_dummy_1"
+        app:layout_constraintTop_toTopOf="@id/chat_dummy_1"
+        app:slide_to_cancel_arrow="@drawable/recv_ic_arrow"
+        app:slide_to_cancel_arrow_color="#000000"
+        app:slide_to_cancel_bounds="8dp"
+        app:slide_to_cancel_margin_right="10dp"
+        app:slide_to_cancel_text="Slide To Cancel" />
+
+    <org.mintsoft.mintly.chatsupp.RecordButton
+        android:id="@+id/chat_sendBtn"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_marginEnd="2dp"
+        android:background="@drawable/chat_bg_send"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="@id/chat_dummy_1"
+        app:layout_constraintEnd_toEndOf="@id/chat_dummy_1"
+        app:layout_constraintTop_toTopOf="@id/chat_dummy_1"
+        app:mic_icon="@drawable/recv_ic_mic_white"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    <com.aghajari.emojiview.view.AXEmojiPopupLayout
+        android:id="@+id/chat_emoji_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/grad_wheel"
+    android:transitionName="wheel_tran"
+    tools:ignore="UnusedAttribute">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/game_wheel_guide_title"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.03" />
+
+    <ImageView
+        android:id="@+id/game_wheel_back"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="15dp"
+        android:adjustViewBounds="true"
+        android:padding="2dp"
+        android:src="@drawable/wheel_back"
+        app:layout_constraintHeight_percent="0.06"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/game_wheel_guide_title" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:background="@drawable/wheel_bal_bg"
+        android:gravity="center_vertical"
+        app:layout_constraintEnd_toStartOf="@id/game_wheel_offer"
+        app:layout_constraintHeight_percent="0.06"
+        app:layout_constraintTop_toBottomOf="@id/game_wheel_guide_title">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/wheel_coin" />
+
+        <TextView
+            android:id="@+id/game_wheel_balView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="sans-serif-black"
+            android:text="1322"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/game_wheel_offer"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginEnd="15dp"
+        android:adjustViewBounds="true"
+        android:padding="3dp"
+        android:src="@drawable/wheel_bal_add"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.06"
+        app:layout_constraintTop_toBottomOf="@id/game_wheel_guide_title"
+        app:layout_constraintWidth_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/game_wheel_guide_wheel_top"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.16" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/game_wheel_guide_wheel_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.66" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/game_wheel_guide_wheel_left"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.06" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/game_wheel_guide_wheel_right"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.94" />
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/game_wheel_guide_wheel_bottom"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintEnd_toStartOf="@id/game_wheel_guide_wheel_right"
+        app:layout_constraintStart_toEndOf="@id/game_wheel_guide_wheel_left"
+        app:layout_constraintTop_toBottomOf="@id/game_wheel_guide_wheel_top">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/wheel_new_img" />
+
+        <LinearLayout
+            android:id="@+id/game_wheel_circleHolder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:orientation="horizontal" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:weightSum="1">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:adjustViewBounds="true"
+                android:src="@drawable/wheel_new_arrow" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:weightSum="1">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.9"
+                android:adjustViewBounds="true"
+                android:src="@drawable/wheel_shadow" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/wheel_input_bg"
+        android:gravity="center"
+        android:weightSum="1"
+        app:layout_constraintBottom_toTopOf="@id/game_wheel_guide_btn1"
+        app:layout_constraintDimensionRatio="8:2.2"
+        app:layout_constraintEnd_toStartOf="@id/game_wheel_guide_wheel_right"
+        app:layout_constraintStart_toEndOf="@id/game_wheel_guide_wheel_left"
+        app:layout_constraintTop_toBottomOf="@id/game_wheel_guide_wheel_bottom">
+
+        <ImageView
+            android:id="@+id/game_wheel_minusView"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="0.12"
+            android:rotation="270"
+            android:scaleType="center"
+            android:src="@drawable/arrow_top"
+            app:tint="@color/white_aa" />
+
+        <TextView
+            android:id="@+id/game_wheel_multiplyView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="1dp"
+            android:text="@string/three_dash"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/game_wheel_plusView"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="1dp"
+            android:layout_weight="0.12"
+            android:rotation="90"
+            android:scaleType="center"
+            android:src="@drawable/arrow_top"
+            app:tint="@color/white_aa" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="13dp"
+            android:layout_weight="0.14"
+            android:adjustViewBounds="true"
+            android:src="@drawable/arrow_alt"
+            app:tint="@color/yellow_2" />
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/icon_coin" />
+
+        <TextView
+            android:id="@+id/game_wheel_requireView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:text="@string/three_dash"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/game_wheel_guide_btn1"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.85" />
+
+    <ImageView
+        android:id="@+id/game_wheel_start"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/btn_start"
+        app:layout_constraintBottom_toTopOf="@id/game_wheel_guide_btn2"
+        app:layout_constraintDimensionRatio="3:1.5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/game_wheel_guide_btn1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/game_wheel_guide_btn2"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.94" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

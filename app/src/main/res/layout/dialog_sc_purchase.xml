@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/rc_white_6dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/dialog_sc_titleView"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/rc_top_gry"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:lines="1"
+            android:paddingStart="20dp"
+            android:paddingEnd="10dp"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center_horizontal"
+            android:text="@string/scratcher_diag_ask"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="264dp"
+            android:layout_height="50dp"
+            android:background="@drawable/rc_input"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/dialog_sc_minus"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:alpha="0.9"
+                android:background="@drawable/rc_green"
+                android:src="@drawable/ic_arrow_chev"
+                app:tint="@color/white" />
+
+            <TextView
+                android:id="@+id/dialog_sc_qtyView"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="2dp"
+                android:fontFamily="@font/extra_bold"
+                android:gravity="center"
+                android:minWidth="50dp"
+                android:textColor="@color/green_2"
+                android:textSize="20sp" />
+
+            <ImageButton
+                android:id="@+id/dialog_sc_plus"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:alpha="0.9"
+                android:background="@drawable/rc_green"
+                android:rotation="180"
+                android:src="@drawable/ic_arrow_chev"
+                app:tint="@color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10sp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/extra_bold"
+                android:text="@string/cost"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="3dp"
+                android:src="@drawable/icon_coin" />
+
+            <TextView
+                android:id="@+id/dialog_sc_cost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/extra_bold"
+                android:text="0"
+                android:textColor="@color/yellow_1"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="15dp"
+            android:gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/dialog_sc_cancel"
+                android:layout_width="130dp"
+                android:layout_height="match_parent"
+                android:text="@string/cancl"
+                android:textColor="@color/white"
+                app:backgroundTint="@color/gray_2" />
+
+            <View
+                android:layout_width="12dp"
+                android:layout_height="1dp" />
+
+            <Button
+                android:id="@+id/dialog_sc_submit"
+                android:layout_width="130dp"
+                android:layout_height="match_parent"
+                android:text="@string/submit"
+                android:textColor="@color/white"
+                app:backgroundTint="@color/green_1" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

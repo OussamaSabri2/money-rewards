@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:transitionName="slot_tran"
+    tools:ignore="UnusedAttribute">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/slot_bg"
+        android:scaleType="fitXY" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/game_slot_guide_amt_h"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.045" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/game_slot_guide_back_v"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <ImageView
+        android:id="@+id/game_slot_back"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/slot_btn_back"
+        app:layout_constraintStart_toEndOf="@id/game_slot_guide_back_v"
+        app:layout_constraintTop_toBottomOf="@id/game_slot_guide_amt_h"
+        app:layout_constraintWidth_percent="0.12" />
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/slot_bg_amt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/game_slot_guide_amt_h"
+        app:layout_constraintWidth_percent="0.55" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/game_slot_guide_amt_txt_h"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.065" />
+
+    <TextView
+        android:id="@+id/game_slot_balView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/custom_1"
+        android:gravity="center_vertical"
+        android:lines="1"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintEnd_toStartOf="@id/game_slot_guide_start_v"
+        app:layout_constraintHeight_percent="0.028"
+        app:layout_constraintTop_toBottomOf="@id/game_slot_guide_amt_txt_h"
+        app:layout_constraintWidth_percent="0.255" />
+
+    <View
+        android:id="@+id/game_slot_offerwall"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.04"
+        app:layout_constraintStart_toEndOf="@id/game_slot_guide_start_v"
+        app:layout_constraintTop_toBottomOf="@id/game_slot_guide_amt_txt_h" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/slot_guide_h"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/slot_frame"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="@id/slot_guide_h"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.568"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/slot_guide_h"
+        app:layout_constraintWidth_percent="0.98" />
+
+    <LinearLayout
+        android:id="@+id/game_slot_holder"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@id/slot_guide_h"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.458"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/slot_guide_h"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <ImageView
+        android:id="@+id/slot_dummy_01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/slot_bg_bottom"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <TextView
+        android:id="@+id/game_slot_chances"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/slot_chance_bg"
+        android:paddingStart="20dp"
+        android:paddingTop="3dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="3dp"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/slot_dummy_01"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/game_slot_guide_win_txt_v"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.265" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/game_slot_guide_win_txt_h"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.895" />
+
+    <TextView
+        android:id="@+id/game_slot_win"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintHeight_percent="0.034"
+        app:layout_constraintStart_toEndOf="@id/game_slot_guide_win_txt_v"
+        app:layout_constraintTop_toBottomOf="@id/game_slot_guide_win_txt_h"
+        app:layout_constraintWidth_percent="0.31" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/game_slot_guide_paytable_v"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.62" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/game_slot_guide_start_h"
+        app:layout_constraintStart_toEndOf="@id/game_slot_guide_paytable_v"
+        app:layout_constraintTop_toBottomOf="@id/game_slot_guide_win_txt_h"
+        app:layout_constraintWidth_percent="0.12" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/game_slot_guide_use_txt_v"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.35" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/game_slot_guide_use_txt_h"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9535" />
+
+    <View
+        android:id="@+id/game_slot_minus"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toStartOf="@id/game_slot_guide_use_txt_v"
+        app:layout_constraintHeight_percent="0.06"
+        app:layout_constraintTop_toBottomOf="@id/game_slot_guide_start_h"
+        app:layout_constraintWidth_percent="0.14" />
+
+    <TextView
+        android:id="@+id/game_slot_use"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintHeight_percent="0.03"
+        app:layout_constraintStart_toEndOf="@id/game_slot_guide_use_txt_v"
+        app:layout_constraintTop_toBottomOf="@id/game_slot_guide_use_txt_h"
+        app:layout_constraintWidth_percent="0.25" />
+
+    <View
+        android:id="@+id/game_slot_plus"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.06"
+        app:layout_constraintStart_toEndOf="@id/game_slot_use"
+        app:layout_constraintTop_toBottomOf="@id/game_slot_guide_start_h"
+        app:layout_constraintWidth_percent="0.14" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/game_slot_guide_start_v"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.87" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/game_slot_guide_start_h"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.943" />
+
+    <ImageView
+        android:id="@+id/game_slot_start"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/slot_btn_start"
+        app:layout_constraintBottom_toBottomOf="@id/game_slot_guide_start_h"
+        app:layout_constraintEnd_toEndOf="@id/game_slot_guide_start_v"
+        app:layout_constraintStart_toStartOf="@id/game_slot_guide_start_v"
+        app:layout_constraintTop_toTopOf="@id/game_slot_guide_start_h"
+        app:layout_constraintWidth_percent="0.185" />
+</androidx.constraintlayout.widget.ConstraintLayout>

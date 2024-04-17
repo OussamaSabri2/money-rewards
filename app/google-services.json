@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "969957828866",
+    "firebase_url": "https://mintsoft-mintly.firebaseio.com",
+    "project_id": "mintsoft-mintly",
+    "storage_bucket": "mintsoft-mintly.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:969957828866:android:e11569cb5b80e958a33a1b",
+        "android_client_info": {
+          "package_name": "org.mintsoft.mintly"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "969957828866-dt549pk8itkosf211jum1onuv4df704o.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "org.mintsoft.mintly",
+            "certificate_hash": "54d9309362094e93aa3b51b8daf06eb14802734e"
+          }
+        },
+        {
+          "client_id": "969957828866-2j0e0i8js2s3ufbpkq4tje3ahnk3qt5s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAw6SP5Fk7ty4-2JE5dzv0ig-xjAGwEb_E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "969957828866-2j0e0i8js2s3ufbpkq4tje3ahnk3qt5s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

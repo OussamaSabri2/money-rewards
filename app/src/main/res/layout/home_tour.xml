@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:alpha="0.9"
+        android:src="@drawable/tour_bg_alt"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/home_tour_guide_h_1"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.13" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/home_tour_guide_v_1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.06" />
+
+    <TextView
+        android:id="@+id/home_tour_titleView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/extra_bold"
+        android:gravity="center_vertical"
+        android:lines="1"
+        android:textColor="@color/white"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintHeight_percent="0.17"
+        app:layout_constraintStart_toEndOf="@id/home_tour_guide_v_1"
+        app:layout_constraintTop_toBottomOf="@id/home_tour_guide_h_1"
+        app:layout_constraintWidth_percent="0.62" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/home_tour_guide_h_2"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.37" />
+
+    <ImageView
+        android:id="@+id/home_tour_mark_right"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/correct_mark"
+        app:layout_constraintBottom_toBottomOf="@+id/home_tour_rewardView"
+        app:layout_constraintHeight_percent="0.07"
+        app:layout_constraintStart_toEndOf="@id/home_tour_guide_v_1"
+        app:layout_constraintTop_toTopOf="@+id/home_tour_rewardView" />
+
+    <TextView
+        android:id="@+id/home_tour_rewardView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:gravity="center_vertical"
+        android:lines="1"
+        android:textColor="@color/white_dim"
+        app:autoSizeMinTextSize="6sp"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintHeight_percent="0.11"
+        app:layout_constraintStart_toEndOf="@id/home_tour_mark_right"
+        app:layout_constraintTop_toBottomOf="@id/home_tour_guide_h_2"
+        app:layout_constraintWidth_percent="0.5" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/correct_mark"
+        app:layout_constraintBottom_toBottomOf="@+id/home_tour_feeView"
+        app:layout_constraintHeight_percent="0.07"
+        app:layout_constraintStart_toEndOf="@id/home_tour_guide_v_1"
+        app:layout_constraintTop_toTopOf="@+id/home_tour_feeView" />
+
+    <TextView
+        android:id="@+id/home_tour_feeView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:gravity="center_vertical"
+        android:lines="1"
+        android:textColor="@color/white_dim"
+        app:autoSizeMinTextSize="6sp"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintHeight_percent="0.11"
+        app:layout_constraintStart_toEndOf="@id/home_tour_mark_right"
+        app:layout_constraintTop_toBottomOf="@id/home_tour_rewardView"
+        app:layout_constraintWidth_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/home_tour_guide_h_4"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.62" />
+
+    <ImageView
+        android:id="@+id/home_tour_enroll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/tour_btn"
+        app:layout_constraintHeight_percent="0.26"
+        app:layout_constraintStart_toEndOf="@id/home_tour_guide_v_1"
+        app:layout_constraintTop_toBottomOf="@id/home_tour_guide_h_4"
+        app:layout_constraintWidth_percent="0.31" />
+
+    <TextView
+        android:id="@+id/home_tour_enrollText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="1dp"
+        android:clickable="false"
+        android:focusable="false"
+        android:textColor="@color/colorPrimaryDark"
+        android:gravity="center"
+        android:text="@string/enroll_now"
+        android:textStyle="bold"
+        app:autoSizeMinTextSize="6sp"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toBottomOf="@id/home_tour_enroll"
+        app:layout_constraintEnd_toEndOf="@id/home_tour_enroll"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintStart_toStartOf="@id/home_tour_enroll"
+        app:layout_constraintTop_toTopOf="@id/home_tour_enroll"
+        app:layout_constraintWidth_percent="0.2" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/home_tour_guide_h_5"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.75" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/home_tour_guide_v_2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.96" />
+
+    <TextView
+        android:text="@string/starts_in"
+        android:id="@+id/home_tour_dateView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="end"
+        android:maxLines="1"
+        android:textColor="@color/colorPrimaryDark"
+        app:autoSizeMinTextSize="6sp"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintEnd_toStartOf="@id/home_tour_guide_v_2"
+        app:layout_constraintHeight_percent="0.08"
+        app:layout_constraintTop_toBottomOf="@id/home_tour_guide_h_5"
+        app:layout_constraintWidth_percent="0.2" />
+
+
+    <TextView
+        android:id="@+id/home_tour_timeView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:gravity="end"
+        android:lines="1"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintEnd_toStartOf="@id/home_tour_guide_v_2"
+        app:layout_constraintHeight_percent="0.12"
+        app:layout_constraintTop_toBottomOf="@id/home_tour_dateView"
+        app:layout_constraintWidth_percent="0.2" />
+</androidx.constraintlayout.widget.ConstraintLayout>

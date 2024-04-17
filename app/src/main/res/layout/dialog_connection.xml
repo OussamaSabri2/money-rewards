@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp">
+
+        <ImageView
+            android:id="@+id/dialog_connection_img"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/no_connection" />
+
+        <TextView
+            android:id="@+id/dialog_connection_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="@string/connection_error"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/dialog_connection_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:gravity="center_horizontal"
+            android:text="@string/connection_error_desc"
+            android:textColor="@color/white_dim"
+            android:textSize="13sp" />
+
+        <Button
+            android:id="@+id/dialog_connection_retry"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="@string/retry"
+            android:textColor="@color/white"
+            android:alpha="0.8"
+            app:backgroundTint="@color/green_2" />
+
+        <Button
+            android:id="@+id/dialog_connection_exit"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginBottom="30dp"
+            android:text="@string/exit_window"
+            android:textColor="@color/white"
+            app:backgroundTint="#20ffffff" />
+    </LinearLayout>
+</RelativeLayout>

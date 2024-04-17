@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_package_name" translatable="false">org.mintsoft.mintly</string>
+
+    <!-- !!!IMPORTANT!!!: do not add "https://" prefix in domain_name string. It is deprecated. -->
+    <string name="domain_name" translatable="false">mintly.mintsoft.org</string>
+
+    <!-- You have to use "https://" prefix in dynamic_link string. -->
+    <string name="dynamic_link" translatable="false">https://mintly.page.link</string>
+
+    <string name="channel_id" translatable="false">default</string>
+    <string name="facebook_app_id" translatable="false">1538670129949971</string>
+    <string name="facebook_client_token" translatable="false">b7abf54d6e7275d30d73f18db4a25aca</string>
+    <string name="fb_login_protocol_scheme" translatable="false">fb4320556941322126</string>
+    <string name="g_server_client_id" translatable="false">969957828866-edo5ggjdldleprt01mqpaaops0ashm1l.apps.googleusercontent.com</string>
+
+    <bool name="show_translation_dialog">true</bool>
+</resources>

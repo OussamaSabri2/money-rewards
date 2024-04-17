@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@android:id/background"
+        android:bottom="15dp"
+        android:left="15dp"
+        android:right="15dp"
+        android:top="15dp">
+        <shape
+            android:shape="oval"
+            android:useLevel="false">
+            <solid android:color="@color/white" />
+        </shape>
+    </item>
+    <item android:id="@android:id/secondaryProgress">
+        <shape
+            android:innerRadiusRatio="3.1"
+            android:shape="ring"
+            android:thicknessRatio="10.0"
+            android:useLevel="true">
+            <solid android:color="@color/gray" />
+        </shape>
+    </item>
+
+    <item android:id="@android:id/progress">
+        <rotate
+            android:fromDegrees="0"
+            android:pivotX="50%"
+            android:pivotY="50%"
+            android:toDegrees="0">
+
+            <layer-list>
+                <item>
+                    <rotate
+                        android:fromDegrees="270"
+                        android:toDegrees="270">
+                        <shape
+                            android:innerRadiusRatio="2.6"
+                            android:shape="ring"
+                            android:thickness="11dp"
+                            android:useLevel="true">
+                            <solid android:color="@color/blue_2" />
+                        </shape>
+                    </rotate>
+                </item>
+                <item android:bottom="88dp">
+                    <shape
+                        android:innerRadiusRatio="1000"
+                        android:shape="ring"
+                        android:thickness="5dp"
+                        android:useLevel="false">
+                        <solid android:color="@color/blue_2" />
+                    </shape>
+                </item>
+                <item>
+                    <rotate>
+                        <inset android:insetBottom="88dp">
+                            <shape
+                                android:innerRadiusRatio="1000"
+                                android:shape="ring"
+                                android:thickness="5dp"
+                                android:useLevel="false">
+                                <solid android:color="@color/blue_2" />
+                            </shape>
+                        </inset>
+                    </rotate>
+                </item>
+            </layer-list>
+        </rotate>
+    </item>
+</layer-list>

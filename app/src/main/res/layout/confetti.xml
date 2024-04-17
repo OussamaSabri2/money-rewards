@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/confetti_holder"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_50">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/confetti_guide_v"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/confetti_guide_h"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.35" />
+
+        <ImageView
+            android:id="@+id/confetti_flare"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/flare"
+            app:layout_constraintBottom_toTopOf="@id/confetti_guide_h"
+            app:layout_constraintDimensionRatio="1"
+            app:layout_constraintEnd_toStartOf="@id/confetti_guide_v"
+            app:layout_constraintStart_toEndOf="@id/confetti_guide_v"
+            app:layout_constraintTop_toBottomOf="@id/confetti_guide_h"
+            app:layout_constraintWidth_percent="0.6" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/rc_confetti"
+            app:layout_constraintBottom_toBottomOf="@id/confetti_textView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/confetti_guide_h"
+            app:layout_constraintWidth_percent="0.85" />
+
+        <ImageView
+            android:id="@+id/confetti_iconView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/icon_coin"
+            app:layout_constraintBottom_toTopOf="@id/confetti_guide_h"
+            app:layout_constraintEnd_toStartOf="@id/confetti_guide_v"
+            app:layout_constraintStart_toEndOf="@id/confetti_guide_v"
+            app:layout_constraintTop_toBottomOf="@id/confetti_guide_h"
+            app:layout_constraintWidth_percent="0.3" />
+
+        <TextView
+            android:id="@+id/confetti_textView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/custom_1"
+            android:gravity="center"
+            android:minHeight="100dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="20dp"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/confetti_iconView"
+            app:layout_constraintWidth_percent="0.7" />
+
+        <ImageView
+            android:id="@+id/confetti_btnHolder"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="5dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/confetti_btn"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/confetti_textView" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/confetti_guide_btn_2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.47" />
+
+        <TextView
+            android:id="@+id/confetti_btnTextView"
+            android:layout_width="0dp"
+            android:layout_height="22dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:clickable="false"
+            android:ellipsize="end"
+            android:focusable="false"
+            android:gravity="center"
+            android:maxLines="1"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:autoSizeMinTextSize="6sp"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintBottom_toBottomOf="@id/confetti_btnHolder"
+            app:layout_constraintEnd_toStartOf="@id/confetti_guide_btn_2"
+            app:layout_constraintStart_toEndOf="@id/confetti_guide_btn_2"
+            app:layout_constraintTop_toTopOf="@id/confetti_btnHolder"
+            app:layout_constraintWidth_percent="0.32" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

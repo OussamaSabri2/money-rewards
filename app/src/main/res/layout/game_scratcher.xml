@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark">
+
+    <ImageView
+        android:id="@+id/game_scratcher_cardHolder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layerType="software"
+        android:scaleType="fitXY" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/game_scratcher_scratchHolder_guide_left"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.13" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/game_scratcher_scratchHolder_guide_right"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.87" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/game_scratcher_scratchHolder_guide_top"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.47" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/game_scratcher_scratchHolder_guide_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.79" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/gray_2"
+        app:layout_constraintBottom_toBottomOf="@id/game_scratcher_scratchHolder"
+        app:layout_constraintEnd_toEndOf="@id/game_scratcher_scratchHolder"
+        app:layout_constraintStart_toStartOf="@id/game_scratcher_scratchHolder"
+        app:layout_constraintTop_toTopOf="@id/game_scratcher_scratchHolder">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/game_scratcher_scg_h1"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.33" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/game_scratcher_scg_h2"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.67" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/game_scratcher_scg_v1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.33" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/game_scratcher_scg_v2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.67" />
+
+        <ImageView
+            android:id="@+id/game_scratcher_imageView_1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:adjustViewBounds="true"
+            android:alpha="0.8"
+            android:src="@drawable/coin_placeholder"
+            app:layout_constraintBottom_toTopOf="@id/game_scratcher_scg_h1"
+            app:layout_constraintEnd_toStartOf="@id/game_scratcher_scg_v1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.2" />
+
+        <TextView
+            android:id="@+id/game_scratcher_textView_1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:fontFamily="@font/extra_bold"
+            android:gravity="center"
+            android:lines="1"
+            android:textColor="@color/yellow_2"
+            app:autoSizeMinTextSize="6sp"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintBottom_toBottomOf="@id/game_scratcher_imageView_1"
+            app:layout_constraintEnd_toEndOf="@id/game_scratcher_imageView_1"
+            app:layout_constraintHeight_percent="0.11"
+            app:layout_constraintStart_toStartOf="@id/game_scratcher_imageView_1"
+            app:layout_constraintTop_toTopOf="@id/game_scratcher_imageView_1"
+            app:layout_constraintWidth_percent="0.11" />
+
+        <ImageView
+            android:id="@+id/game_scratcher_imageView_2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:adjustViewBounds="true"
+            android:alpha="0.8"
+            android:src="@drawable/coin_placeholder"
+            app:layout_constraintBottom_toTopOf="@id/game_scratcher_scg_h1"
+            app:layout_constraintEnd_toStartOf="@id/game_scratcher_scg_v2"
+            app:layout_constraintStart_toEndOf="@id/game_scratcher_scg_v1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.2" />
+
+        <TextView
+            android:id="@+id/game_scratcher_textView_2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:fontFamily="@font/extra_bold"
+            android:gravity="center"
+            android:lines="1"
+            android:textColor="@color/yellow_2"
+            app:autoSizeMinTextSize="6sp"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintBottom_toBottomOf="@id/game_scratcher_imageView_2"
+            app:layout_constraintEnd_toEndOf="@id/game_scratcher_imageView_2"
+            app:layout_constraintHeight_percent="0.11"
+            app:layout_constraintStart_toStartOf="@id/game_scratcher_imageView_2"
+            app:layout_constraintTop_toTopOf="@id/game_scratcher_imageView_2"
+            app:layout_constraintWidth_percent="0.11" />
+
+        <ImageView
+            android:id="@+id/game_scratcher_imageView_3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:adjustViewBounds="true"
+            android:alpha="0.8"
+            android:src="@drawable/coin_placeholder"
+            app:layout_constraintBottom_toTopOf="@id/game_scratcher_scg_h1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/game_scratcher_scg_v2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.2" />
+
+        <TextView
+            android:id="@+id/game_scratcher_textView_3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:fontFamily="@font/extra_bold"
+            android:gravity="center"
+            android:lines="1"
+            android:textColor="@color/yellow_2"
+            app:autoSizeMinTextSize="6sp"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintBottom_toBottomOf="@id/game_scratcher_imageView_3"
+            app:layout_constraintEnd_toEndOf="@id/game_scratcher_imageView_3"
+            app:layout_constraintHeight_percent="0.11"
+            app:layout_constraintStart_toStartOf="@id/game_scratcher_imageView_3"
+            app:layout_constraintTop_toTopOf="@id/game_scratcher_imageView_3"
+            app:layout_constraintWidth_percent="0.11" />
+
+        <ImageView
+            android:id="@+id/game_scratcher_imageView_4"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:adjustViewBounds="true"
+            android:alpha="0.8"
+            android:src="@drawable/coin_placeholder"
+            app:layout_constraintBottom_toTopOf="@id/game_scratcher_scg_h2"
+            app:layout_constraintEnd_toStartOf="@id/game_scratcher_scg_v1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/game_scratcher_scg_h1"
+            app:layout_constraintWidth_percent="0.2" />
+
+        <TextView
+            android:id="@+id/game_scratcher_textView_4"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:fontFamily="@font/extra_bold"
+            android:gravity="center"
+            android:lines="1"
+            android:textColor="@color/yellow_2"
+            app:autoSizeMinTextSize="6sp"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintBottom_toBottomOf="@id/game_scratcher_imageView_4"
+            app:layout_constraintEnd_toEndOf="@id/game_scratcher_imageView_4"
+            app:layout_constraintHeight_percent="0.11"
+            app:layout_constraintStart_toStartOf="@id/game_scratcher_imageView_4"
+            app:layout_constraintTop_toTopOf="@id/game_scratcher_imageView_4"
+            app:layout_constraintWidth_percent="0.11" />
+
+        <ImageView
+            android:id="@+id/game_scratcher_imageView_5"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:adjustViewBounds="true"
+            android:alpha="0.8"
+            android:src="@drawable/coin_placeholder"
+            app:layout_constraintBottom_toTopOf="@id/game_scratcher_scg_h2"
+            app:layout_constraintEnd_toStartOf="@id/game_scratcher_scg_v2"
+            app:layout_constraintStart_toEndOf="@id/game_scratcher_scg_v1"
+            app:layout_constraintTop_toBottomOf="@id/game_scratcher_scg_h1"
+            app:layout_constraintWidth_percent="0.2" />
+
+        <TextView
+            android:id="@+id/game_scratcher_textView_5"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:fontFamily="@font/extra_bold"
+            android:gravity="center"
+            android:lines="1"
+            android:textColor="@color/yellow_2"
+            app:autoSizeMinTextSize="6sp"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintBottom_toBottomOf="@id/game_scratcher_imageView_5"
+            app:layout_constraintEnd_toEndOf="@id/game_scratcher_imageView_5"
+            app:layout_constraintHeight_percent="0.11"
+            app:layout_constraintStart_toStartOf="@id/game_scratcher_imageView_5"
+            app:layout_constraintTop_toTopOf="@id/game_scratcher_imageView_5"
+            app:layout_constraintWidth_percent="0.11" />
+
+        <ImageView
+            android:id="@+id/game_scratcher_imageView_6"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:adjustViewBounds="true"
+            android:alpha="0.8"
+            android:src="@drawable/coin_placeholder"
+            app:layout_constraintBottom_toTopOf="@id/game_scratcher_scg_h2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/game_scratcher_scg_v2"
+            app:layout_constraintTop_toBottomOf="@id/game_scratcher_scg_h1"
+            app:layout_constraintWidth_percent="0.2" />
+
+        <TextView
+            android:id="@+id/game_scratcher_textView_6"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:fontFamily="@font/extra_bold"
+            android:gravity="center"
+            android:lines="1"
+            android:textColor="@color/yellow_2"
+            app:autoSizeMinTextSize="6sp"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintBottom_toBottomOf="@id/game_scratcher_imageView_6"
+            app:layout_constraintEnd_toEndOf="@id/game_scratcher_imageView_6"
+            app:layout_constraintHeight_percent="0.11"
+            app:layout_constraintStart_toStartOf="@id/game_scratcher_imageView_6"
+            app:layout_constraintTop_toTopOf="@id/game_scratcher_imageView_6"
+            app:layout_constraintWidth_percent="0.11" />
+
+        <ImageView
+            android:id="@+id/game_scratcher_imageView_7"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:adjustViewBounds="true"
+            android:alpha="0.8"
+            android:src="@drawable/coin_placeholder"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/game_scratcher_scg_v1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/game_scratcher_scg_h2"
+            app:layout_constraintWidth_percent="0.2" />
+
+        <TextView
+            android:id="@+id/game_scratcher_textView_7"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:fontFamily="@font/extra_bold"
+            android:gravity="center"
+            android:lines="1"
+            android:textColor="@color/yellow_2"
+            app:autoSizeMinTextSize="6sp"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintBottom_toBottomOf="@id/game_scratcher_imageView_7"
+            app:layout_constraintEnd_toEndOf="@id/game_scratcher_imageView_7"
+            app:layout_constraintHeight_percent="0.11"
+            app:layout_constraintStart_toStartOf="@id/game_scratcher_imageView_7"
+            app:layout_constraintTop_toTopOf="@id/game_scratcher_imageView_7"
+            app:layout_constraintWidth_percent="0.11" />
+
+        <ImageView
+            android:id="@+id/game_scratcher_imageView_8"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:adjustViewBounds="true"
+            android:alpha="0.8"
+            android:src="@drawable/coin_placeholder"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/game_scratcher_scg_v2"
+            app:layout_constraintStart_toEndOf="@id/game_scratcher_scg_v1"
+            app:layout_constraintTop_toBottomOf="@id/game_scratcher_scg_h2"
+            app:layout_constraintWidth_percent="0.2" />
+
+        <TextView
+            android:id="@+id/game_scratcher_textView_8"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:fontFamily="@font/extra_bold"
+            android:gravity="center"
+            android:lines="1"
+            android:textColor="@color/yellow_2"
+            app:autoSizeMinTextSize="6sp"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintBottom_toBottomOf="@id/game_scratcher_imageView_7"
+            app:layout_constraintEnd_toEndOf="@id/game_scratcher_imageView_8"
+            app:layout_constraintHeight_percent="0.11"
+            app:layout_constraintStart_toStartOf="@id/game_scratcher_imageView_8"
+            app:layout_constraintTop_toTopOf="@id/game_scratcher_imageView_8"
+            app:layout_constraintWidth_percent="0.11" />
+
+        <ImageView
+            android:id="@+id/game_scratcher_imageView_9"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:adjustViewBounds="true"
+            android:alpha="0.8"
+            android:src="@drawable/coin_placeholder"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/game_scratcher_scg_v2"
+            app:layout_constraintTop_toBottomOf="@id/game_scratcher_scg_h2"
+            app:layout_constraintWidth_percent="0.2" />
+
+        <TextView
+            android:id="@+id/game_scratcher_textView_9"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:fontFamily="@font/extra_bold"
+            android:gravity="center"
+            android:lines="1"
+            android:textColor="@color/yellow_2"
+            app:autoSizeMinTextSize="6sp"
+            app:autoSizeTextType="uniform"
+            app:layout_constraintBottom_toBottomOf="@id/game_scratcher_imageView_9"
+            app:layout_constraintEnd_toEndOf="@id/game_scratcher_imageView_9"
+            app:layout_constraintHeight_percent="0.11"
+            app:layout_constraintStart_toStartOf="@id/game_scratcher_imageView_9"
+            app:layout_constraintTop_toTopOf="@id/game_scratcher_imageView_9"
+            app:layout_constraintWidth_percent="0.11" />
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/dash_line_v"
+            android:layerType="software"
+            app:layout_constraintEnd_toEndOf="@id/game_scratcher_scg_v1"
+            app:layout_constraintStart_toStartOf="@id/game_scratcher_scg_v1" />
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/dash_line_v"
+            android:layerType="software"
+            app:layout_constraintEnd_toEndOf="@id/game_scratcher_scg_v2"
+            app:layout_constraintStart_toStartOf="@id/game_scratcher_scg_v2" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@drawable/dash_line_h"
+            android:layerType="software"
+            app:layout_constraintBottom_toTopOf="@id/game_scratcher_scg_h1"
+            app:layout_constraintTop_toBottomOf="@id/game_scratcher_scg_h1" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@drawable/dash_line_h"
+            android:layerType="software"
+            app:layout_constraintBottom_toTopOf="@id/game_scratcher_scg_h2"
+            app:layout_constraintTop_toBottomOf="@id/game_scratcher_scg_h2" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/game_scratcher_scratchHolder"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/colorPrimaryDark"
+        android:layerType="software"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@id/game_scratcher_scratchHolder_guide_bottom"
+        app:layout_constraintEnd_toStartOf="@id/game_scratcher_scratchHolder_guide_right"
+        app:layout_constraintStart_toEndOf="@id/game_scratcher_scratchHolder_guide_left"
+        app:layout_constraintTop_toBottomOf="@id/game_scratcher_scratchHolder_guide_top" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/black_50"
+        app:layout_constraintHeight_percent="0.08"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/game_scratcher_back"
+            android:layout_width="45dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="12dp"
+            android:src="@drawable/ic_arrow_chev"
+            app:tint="@color/white" />
+
+        <TextView
+            android:id="@+id/game_scratcher_titleView"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:ellipsize="end"
+            android:fontFamily="@font/custom_1"
+            android:gravity="center_horizontal"
+            android:lines="1"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

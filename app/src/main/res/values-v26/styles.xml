@@ -1,0 +1,10 @@
+<resources>
+
+    <style name="PersistPopup" parent="AppTheme">
+        <item name="android:windowBackground">@color/black_90</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowAnimationStyle">@style/FadingAnimation</item>
+    </style>
+</resources>

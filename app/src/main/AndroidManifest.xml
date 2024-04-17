@@ -1,0 +1,610 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="29"
+        tools:replace="android:maxSdkVersion" />
+    <uses-permission
+        android:name="android.permission.QUERY_ALL_PACKAGES"
+        tools:ignore="ScopedStorage"
+        tools:node="remove" />
+    <uses-permission
+        android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage"
+        tools:node="remove" />
+
+    <uses-sdk tools:overrideLibrary="com.offertoro.sdk" />
+    <application
+        android:name="androidx.multidex.MultiDexApplication"
+        android:allowBackup="true"
+        android:fullBackupContent="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="UnusedAttribute"
+        tools:replace="android:fullBackupContent">
+        <activity
+            android:name=".Splash"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme"
+            tools:ignore="LockedOrientationActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Home"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".account.Login"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.SemiTrans"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".account.Register"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".account.LoginPhone"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".account.Deeplink"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:noHistory="true"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity">
+            <intent-filter android:priority="100">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="@string/domain_name"
+                    android:pathPrefix="/login/reset"
+                    android:scheme="https" />
+                <data
+                    android:host="@string/domain_name"
+                    android:pathPrefix="/login/reset"
+                    android:scheme="http" />
+                <data
+                    android:host="@string/domain_name"
+                    android:pathPrefix="/login/reset"
+                    android:scheme="app" />
+                <data
+                    android:host="@string/domain_name"
+                    android:pathPrefix="/register/confirm"
+                    android:scheme="https" />
+                <data
+                    android:host="@string/domain_name"
+                    android:pathPrefix="/register/confirm"
+                    android:scheme="http" />
+                <data
+                    android:host="@string/domain_name"
+                    android:pathPrefix="/register/confirm"
+                    android:scheme="app" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".Leaderboard"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/PersistPopup"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".account.Gift"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/PersistPopup"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".account.Profile"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/PersistPopup"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".account.Settings"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/PersistPopup"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".chatsupp.Chat"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".Support"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/PersistPopup"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".Faq"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/PersistPopup"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".account.Refs"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".Tos"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".account.wHistory"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".account.rHistory"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+
+        <!-- Games start -->
+        <activity
+            android:name=".games.Tournament"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/PersistPopup"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".games.TournamentRes"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/PersistPopup"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".games.QuizCat"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/PersistPopup"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".games.Quiz"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/PersistPopup"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".games.GuessWord"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/PersistPopup"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".games.ImagepuzzleCat"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/PersistPopup"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".games.Imagepuzzle"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/PersistPopup"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".games.JigsawpuzzleCat"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/PersistPopup"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".games.Jigsawpuzzle"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/PersistPopup"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".games.Wheel"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/PersistPopup"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".games.Slot"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/PersistPopup"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".games.Lotto"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/PersistPopup"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".games.LottoHistory"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/PersistPopup"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".games.ScratcherCat"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/PersistPopup"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".games.Scratcher"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/PersistPopup"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".games.GameList"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/PersistPopup"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="org.mintsoft.mintlib.HtmlGame"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
+            android:exported="false" />
+        <activity
+            android:name="org.mintsoft.mintlib.PPV"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <!-- Games end -->
+
+        <!-- Popups start -->
+        <activity
+            android:name=".helper.GlobalMsg"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/PersistPopup"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".helper.PushMsg"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/PersistPopup"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".helper.PopupNotif"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/PersistPopup"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".helper.PopupAr"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/PersistPopup"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".helper.PopupPreQuiz"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/PersistPopup"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".helper.Surf"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/PersistPopup"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".helper.PushSurf"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/PersistPopup"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".helper.Confetti"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/PersistPopup"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".helper.Dlink"
+            android:exported="true"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="@string/domain_name"
+                    android:pathPrefix="/refer"
+                    android:scheme="http" />
+                <data
+                    android:host="@string/domain_name"
+                    android:pathPrefix="/refer"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <!-- Popups end -->
+
+        <!-- Offers start -->
+        <activity
+            android:name=".offers.Offers"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/PersistPopup"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".offers.APIOffers"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/PersistPopup"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".offers.Yt"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
+            android:exported="false"
+            android:theme="@style/PersistPopup" />
+        <activity
+            android:name=".offers.PPVOffers"
+            android:screenOrientation="portrait"
+            android:theme="@style/PersistPopup"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".offers.TaskOffers"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/PersistPopup"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".offers.TaskDetails"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/PersistPopup"
+            tools:ignore="LockedOrientationActivity" />
+        <!-- Offers end -->
+
+        <!-- for SDK offer (START)-->
+        <activity
+            android:name=".sdkoffers.adcolony"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".sdkoffers.admob"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".sdkoffers.applovin"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".sdkoffers.ayetstudios"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".sdkoffers.chartboost"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".sdkoffers.fyber"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".sdkoffers.ironsrc_c"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".sdkoffers.ironsrc_v"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".sdkoffers.offertoro"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".sdkoffers.personaly"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".sdkoffers.tapjoy"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".sdkoffers.vungle"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".sdkoffers.fbook"
+            android:exported="false"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".sdkoffers.unityads"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <!-- for SDK offer (END)-->
+
+        <!-- Firebase messaging start -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/channel_id" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_stat_name" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/green_2" />
+
+        <service
+            android:name=".helper.NService"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <!-- Firebase messaging end -->
+        <!-- Google login START -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <!-- Google login END -->
+        <!-- FB start -->
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+        <meta-data
+            android:name="com.facebook.sdk.ClientToken"
+            android:value="@string/facebook_client_token" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+        <!-- FB end -->
+
+        <!-- **************************************** -->
+        <!-- ************** AD NETWORKS ************* -->
+        <!-- **************************************** -->
+        <!-- Admob start -->
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3940256099942544~3347511713" />
+
+        <!-- Admob end -->
+        <!-- Tapjoy start -->
+        <activity
+            android:name="com.tapjoy.TJAdUnitActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:hardwareAccelerated="true"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+
+        <activity
+            android:name="com.tapjoy.TJContentActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!-- Tapjoy end -->
+        <!-- Ayetstudios start -->
+        <activity
+            android:name="com.ayetstudios.publishersdk.OfferwallActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="true">
+            <intent-filter android:label="offer">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="@string/app_package_name"
+                    android:scheme="offer" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.ayetstudios.publishersdk.VideoActivity"
+            android:configChanges="orientation|screenSize" />
+        <!-- Ayetstudios end -->
+        <!-- Ironsrc start -->
+        <activity
+            android:name="com.ironsource.sdk.controller.ControllerActivity"
+            android:configChanges="orientation|screenSize"
+            android:hardwareAccelerated="true" />
+        <activity
+            android:name="com.ironsource.sdk.controller.InterstitialActivity"
+            android:configChanges="orientation|screenSize"
+            android:hardwareAccelerated="true"
+            android:theme="@android:style/Theme.Translucent" />
+        <activity
+            android:name="com.ironsource.sdk.controller.OpenUrlActivity"
+            android:configChanges="orientation|screenSize"
+            android:hardwareAccelerated="true"
+            android:theme="@android:style/Theme.Translucent" />
+        <!-- Ironsrc end -->
+        <!-- Chartboost start -->
+        <activity
+            android:name="com.chartboost.sdk.CBImpressionActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:excludeFromRecents="true"
+            android:hardwareAccelerated="true"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+        <!-- Chartboost end -->
+        <receiver
+            android:name="com.offertoro.sdk.sdk.OfferToroReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.offertoro_video.sdk.CALLBACK_INTENT" />
+            </intent-filter>
+        </receiver>
+
+        <provider
+            android:name="com.ironsource.lifecycle.IronsourceLifecycleProvider"
+            android:authorities="${applicationId}.IronsourceLifecycleProvider"
+            android:exported="false" />
+
+        <meta-data
+            android:name="applovin.sdk.key"
+            android:value="u6DX8PdC2oSH_DmG2CX_15E2PhPIRG3JMHsVgThiG8_FLmWOy2N-8c0XJQrlhu33AwTsOEZeNTvkIP6FSTDa5E" />
+    </application>
+
+</manifest>
